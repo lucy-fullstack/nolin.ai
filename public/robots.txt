@@ -1,0 +1,9 @@
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Disallow specific paths if needed
+# Disallow: /private-area/
+
+# Specify sitemap location
+Sitemap: https://nolin.ai/sitemap.xml 

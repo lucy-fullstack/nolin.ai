@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://nolin.ai/</loc>
+    <lastmod>2024-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nolin.ai/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://nolin.ai/es" />
+  </url>
+  <url>
+    <loc>https://nolin.ai/pricing</loc>
+    <lastmod>2024-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nolin.ai/pricing" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://nolin.ai/es/pricing" />
+  </url>
+  <url>
+    <loc>https://nolin.ai/use-cases/linkedin-creators</loc>
+    <lastmod>2024-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nolin.ai/use-cases/linkedin-creators" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://nolin.ai/es/use-cases/linkedin-creators" />
+  </url>
+  <url>
+    <loc>https://nolin.ai/use-cases/ghostwriters</loc>
+    <lastmod>2024-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nolin.ai/use-cases/ghostwriters" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://nolin.ai/es/use-cases/ghostwriters" />
+  </url>
+  <url>
+    <loc>https://nolin.ai/use-cases/community-managers</loc>
+    <lastmod>2024-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nolin.ai/use-cases/community-managers" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://nolin.ai/es/use-cases/community-managers" />
+  </url>
+  <url>
+    <loc>https://nolin.ai/use-cases/agencies</loc>
+    <lastmod>2024-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nolin.ai/use-cases/agencies" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://nolin.ai/es/use-cases/agencies" />
+  </url>
+  <url>
+    <loc>https://nolin.ai/privacy</loc>
+    <lastmod>2024-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nolin.ai/privacy" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://nolin.ai/es/privacy" />
+  </url>
+</urlset> 

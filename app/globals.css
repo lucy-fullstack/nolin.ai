@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 44 43% 97%; /* Ivory Beige #FDF7F1 */
+    --foreground: 227 45% 8%; /* Night Navy #0B0A1F */
+    --card: 38 33% 91%; /* Light Sand #F1EAE3 */
+    --card-foreground: 227 45% 8%; /* Night Navy #0B0A1F */
+    --popover: 0 0% 100%; /* Soft White #FFFFFF */
+    --popover-foreground: 227 45% 8%; /* Night Navy #0B0A1F */
+    --primary: 17 70% 50%; /* Bold Orange #DC5427 */
+    --primary-foreground: 0 0% 100%; /* Soft White #FFFFFF */
+    --secondary: 38 33% 91%; /* Light Sand #F1EAE3 */
+    --secondary-foreground: 227 45% 8%; /* Night Navy #0B0A1F */
+    --muted: 19 15% 83%; /* Shadow Gray #DAD2CC */
+    --muted-foreground: 227 45% 30%; /* Light Night Navy */
+    --accent: 17 70% 50%; /* Bold Orange #DC5427 */
+    --accent-foreground: 0 0% 100%; /* Soft White #FFFFFF */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 19 15% 83%; /* Shadow Gray #DAD2CC */
+    --input: 19 15% 83%; /* Shadow Gray #DAD2CC */
+    --ring: 17 70% 50%; /* Bold Orange #DC5427 */
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 227 45% 8%; /* Night Navy #0B0A1F */
+    --foreground: 44 43% 97%; /* Ivory Beige #FDF7F1 */
+    --card: 227 45% 12%; /* Slightly lighter Night Navy */
+    --card-foreground: 44 43% 97%; /* Ivory Beige #FDF7F1 */
+    --popover: 227 45% 8%; /* Night Navy #0B0A1F */
+    --popover-foreground: 44 43% 97%; /* Ivory Beige #FDF7F1 */
+    --primary: 17 70% 50%; /* Bold Orange #DC5427 */
+    --primary-foreground: 0 0% 100%; /* Soft White #FFFFFF */
+    --secondary: 227 45% 15%; /* Slightly lighter Night Navy */
+    --secondary-foreground: 44 43% 97%; /* Ivory Beige #FDF7F1 */
+    --muted: 227 45% 20%; /* Muted Night Navy */
+    --muted-foreground: 44 43% 80%; /* Dimmer Ivory Beige */
+    --accent: 17 70% 50%; /* Bold Orange #DC5427 */
+    --accent-foreground: 0 0% 100%; /* Soft White #FFFFFF */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 227 45% 20%; /* Muted Night Navy */
+    --input: 227 45% 20%; /* Muted Night Navy */
+    --ring: 17 70% 50%; /* Bold Orange #DC5427 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+}
