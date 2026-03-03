@@ -5,7 +5,7 @@ import { ArrowRight, Calendar, Clock, Linkedin, Sparkles, Zap, Users } from "luc
 import Link from "next/link"
 import { TypewriterEffect } from "@/components/typewriter-effect"
 import { CardHoverEffect } from "@/components/card-hover-effect"
-import { WaitlistForm } from "@/components/waitlist-form"
+
 import { HeroImage } from "@/components/hero-image"
 import { WorkflowDiagram } from "@/components/workflow-diagram"
 import { DashboardMockup } from "@/components/dashboard-mockup"
@@ -52,8 +52,8 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Button asChild size="lg" className="gap-2 px-6 shadow-md">
-                <Link href="#waitlist">
-                  {t("join_waitlist")}
+                <Link href="/auth?mode=signup">
+                  {t("get_started")}
                   <ArrowRight className="h-4 w-4 ml-1" />
                 </Link>
               </Button>
@@ -162,7 +162,7 @@ export default function Home() {
           <PricingSectionDemo />
         </section>
 
-        <section id="waitlist" className="py-20 bg-primary/5">
+        <section id="cta" className="py-20 bg-primary/5">
           <div className="container max-w-4xl">
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-3xl font-bold tracking-tighter">{t("waitlist_title")}</h2>
@@ -170,7 +170,19 @@ export default function Home() {
                 {t("waitlist_subtitle")}
               </p>
             </div>
-            <WaitlistForm />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="gap-2 px-8 shadow-md">
+                <Link href="/auth?mode=signup">
+                  {t("get_started")}
+                  <ArrowRight className="h-4 w-4 ml-1" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="gap-2">
+                <Link href="/auth?mode=login">
+                  {t("login")}
+                </Link>
+              </Button>
+            </div>
           </div>
         </section>
     </>

@@ -2,12 +2,10 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { NotionLinkedInFlowDemo } from "@/components/notion-linkedin-flow-demo"
 import { useLanguage } from "@/contexts/language-context"
-import { WaitlistModal } from "@/components/waitlist-modal"
 import { 
   CheckCircle, 
   Quote, 
@@ -62,7 +60,6 @@ type UseCase = {
 
 export function UseCaseTemplate({ useCase }: { useCase: UseCase }) {
   const { t, language } = useLanguage()
-  const [isWaitlistModalOpen, setIsWaitlistModalOpen] = useState(false)
   
   // Translate the audience name
   const getTranslatedAudience = () => {
@@ -388,14 +385,16 @@ export function UseCaseTemplate({ useCase }: { useCase: UseCase }) {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <Button className="gap-4" onClick={() => setIsWaitlistModalOpen(true)}>
-                    {t("get_started_free")} 
-                    <motion.span
-                      animate={{ x: [0, 4, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop", ease: "easeInOut" }}
-                    >
-                      <MoveRight className="w-4 h-4" />
-                    </motion.span>
+                  <Button className="gap-4" asChild>
+                    <Link href="/auth?mode=signup">
+                      {t("get_started_free")} 
+                      <motion.span
+                        animate={{ x: [0, 4, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop", ease: "easeInOut" }}
+                      >
+                        <MoveRight className="w-4 h-4" />
+                      </motion.span>
+                    </Link>
                   </Button>
                 </motion.div>
               </div>
@@ -403,9 +402,6 @@ export function UseCaseTemplate({ useCase }: { useCase: UseCase }) {
           </div>
         </section>
       </main>
-      
-      {/* Waitlist Modal */}
-      <WaitlistModal isOpen={isWaitlistModalOpen} onClose={() => setIsWaitlistModalOpen(false)} />
     </div>
   )
 }
