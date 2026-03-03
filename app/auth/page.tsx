@@ -156,12 +156,7 @@ function AuthPageContent() {
     }
 
     try {
-      console.log("[v0] Starting signup process...")
-      console.log("[v0] Supabase URL:", process.env.NEXT_PUBLIC_SUPABASE_URL)
-      console.log("[v0] Supabase Anon Key exists:", !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)
-      
       const supabase = createClient()
-      console.log("[v0] Supabase client created")
       
       const { data, error } = await supabase.auth.signUp({
         email,
@@ -174,14 +169,21 @@ function AuthPageContent() {
         },
       })
 
-      console.log("[v0] Signup response:", { data, error })
-
       if (error) throw error
 
       setSuccess("signup_success")
-    } catch (err) {
+    } catch (err: unknown) {
       console.error("[v0] Signup error:", err)
-      setError(err instanceof Error ? err.message : "An error occurred")
+      if (err instanceof Error) {
+        // Check for specific error types
+        if (err.message.includes("fetch") || err.message.includes("Failed to fetch")) {
+          setError("Unable to connect to authentication service. Please check your internet connection and try again.")
+        } else {
+          setError(err.message)
+        }
+      } else {
+        setError("An unexpected error occurred")
+      }
     } finally {
       setIsLoading(false)
     }
