@@ -47,6 +47,14 @@ export async function POST(request: NextRequest) {
     const cookieStore = cookies()
     const supabase = createClient(cookieStore)
     
+    if (!supabase) {
+      console.error('Supabase client not initialized - missing environment variables')
+      return NextResponse.json(
+        { success: false, error: 'Database connection not configured. Please contact support.' },
+        { status: 503 }
+      )
+    }
+    
     const body = await request.json()
     console.log('Request body:', body)
     
