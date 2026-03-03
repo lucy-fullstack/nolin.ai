@@ -156,8 +156,14 @@ function AuthPageContent() {
     }
 
     try {
+      console.log("[v0] Starting signup process...")
+      console.log("[v0] Supabase URL:", process.env.NEXT_PUBLIC_SUPABASE_URL)
+      console.log("[v0] Supabase Anon Key exists:", !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)
+      
       const supabase = createClient()
-      const { error } = await supabase.auth.signUp({
+      console.log("[v0] Supabase client created")
+      
+      const { data, error } = await supabase.auth.signUp({
         email,
         password,
         options: {
@@ -168,10 +174,13 @@ function AuthPageContent() {
         },
       })
 
+      console.log("[v0] Signup response:", { data, error })
+
       if (error) throw error
 
       setSuccess("signup_success")
     } catch (err) {
+      console.error("[v0] Signup error:", err)
       setError(err instanceof Error ? err.message : "An error occurred")
     } finally {
       setIsLoading(false)
